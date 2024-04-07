@@ -16,7 +16,7 @@ public class ModEntityTypes {
             = DeferredRegister.create(ForgeRegistries.ENTITIES, moarexplosives.MOD_ID);
 
     public static final RegistryObject<EntityType<remote_explosive>> REMOTE_EXPLOSIVE =
-            ENTITY_TYPES.register("remote_explosive", () ->EntityType.Builder.
+            ENTITY_TYPES.register("remote_explosive", () -> EntityType.Builder.
             of(remote_explosive::new, EntityClassification.MISC).sized(0.6f, 0.3f).
             build(new ResourceLocation(moarexplosives.MOD_ID, "remote_explosive").toString()));
 

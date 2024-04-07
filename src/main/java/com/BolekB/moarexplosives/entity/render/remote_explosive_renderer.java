@@ -15,11 +15,15 @@ public class remote_explosive_renderer extends MobRenderer<remote_explosive, rem
             new ResourceLocation(moarexplosives.MOD_ID, "textures/item/remote_explosive.png");
 
     public remote_explosive_renderer(EntityRendererManager renderManagerIn)
-    {super(renderManagerIn, new remote_explosive_model<>(),0.2f);}
+    {
+        super(renderManagerIn, new remote_explosive_model<>(),0.2f);
+
+    }
 
     @Override
     public ResourceLocation getTextureLocation(remote_explosive p_110775_1_) {
         return TEXTURE;
     }
+
 
 }
