@@ -1,6 +1,7 @@
 package com.BolekB.moarexplosives.entity.custom;
 
 import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.MobEntity;
@@ -21,8 +22,6 @@ import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.text.TextComponent;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.World;
-import net.minecraft.world.server.ServerWorld;
-import net.minecraftforge.fml.common.Mod;
 
 import javax.annotation.Nullable;
 import java.util.List;
@@ -65,14 +64,6 @@ public class remote_explosive extends MobEntity {
     }
 
     @Override
-    public boolean canBeCollidedWith()
-    {
-        return false;
-    }
-
-    @Override
-    public boolean canCollideWith(Entity entity) { return false; }
-    @Override
     public boolean canTrample(BlockState state, BlockPos pos, float fallDistance) { return false; }
 
 
@@ -109,9 +100,12 @@ public class remote_explosive extends MobEntity {
         }
 
 
-        if (this.isOnGround() || (flag1 && vector3d4.y < 0.0D))
+        if (this.isOnGround())
         {
-            System.out.println(this.blockPosition());
+            return new Vector3d(0, 0, 0);
+        }
+        else if(this.horizontalCollision)
+        {
             return new Vector3d(0, 0, 0);
         }
         else

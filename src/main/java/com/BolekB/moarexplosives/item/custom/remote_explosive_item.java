@@ -33,7 +33,6 @@ public class remote_explosive_item extends Item {
             remote_explosive.finalizeSpawn(((ServerWorld) world).getWorldServer(), world.getCurrentDifficultyAt(remote_explosive.blockPosition()), SpawnReason.MOB_SUMMONED, null, null);
             world.addFreshEntity(remote_explosive);
             remote_explosive.getPersistentData().putString("UserID", player.getUUID().toString());
-            System.out.println(remote_explosive.getPersistentData().getString("UserID"));
 
 //            remote_explosive.Explode(world);
 

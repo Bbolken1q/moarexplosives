@@ -23,9 +23,6 @@ public class ModItems {
     public static final RegistryObject<Item> PLATE_CARRIER = ITEMS.register("plate_carrier",
             () -> new ArmorItem(ModArmorMaterial.PLATE, EquipmentSlotType.CHEST, new Item.Properties().tab(ItemGroup.TAB_COMBAT)));
 
-    public static final RegistryObject<Item> TACTICAL_HELMET = ITEMS.register("tactical_helmet",
-            () -> new ArmorItem(ModArmorMaterial.PLATE, EquipmentSlotType.HEAD, new Item.Properties().tab(ItemGroup.TAB_COMBAT)));
-
     public static final RegistryObject<Item> REMOTE_TRIGGER = ITEMS.register("remote_trigger",
             () -> new remote_activator_item(new Item.Properties().tab(ItemGroup.TAB_MISC).stacksTo(1)));
 
