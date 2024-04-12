@@ -23,7 +23,8 @@ public class remote_explosive_item extends Item {
         World world = player.level;
         if ((world instanceof ServerWorld) && (player.getMainHandItem().getItem() == ModItems.REMOTE_EXPLOSIVE.get()))
         {
-//            player.sendMessage(new StringTextComponent(player.getMainHandItem().toString()), player.getUUID());
+//            player.sendMessage(new StringTextComponent(player.getMainHandItem().toString()), player.getUUID())
+            player.setItemInHand(player.getUsedItemHand(), ItemStack.EMPTY); //Game doesn't set main hand ItemStack to empty for some reason, so I set it manually
 
             remote_explosive remote_explosive = new remote_explosive(ModEntityTypes.REMOTE_EXPLOSIVE.get(), world);
             remote_explosive.moveTo(player.position().add(player.getLookAngle().x,1D,player.getLookAngle().z));
@@ -33,11 +34,6 @@ public class remote_explosive_item extends Item {
             remote_explosive.finalizeSpawn(((ServerWorld) world).getWorldServer(), world.getCurrentDifficultyAt(remote_explosive.blockPosition()), SpawnReason.MOB_SUMMONED, null, null);
             world.addFreshEntity(remote_explosive);
             remote_explosive.getPersistentData().putString("UserID", player.getUUID().toString());
-
-//            remote_explosive.Explode(world);
-
-
-            if (player != null) { player.setItemInHand(player.getUsedItemHand(), ItemStack.EMPTY); } //Game doesn't set main hand ItemStack to empty for some reason, so I set it manually
         }
 
         return false;

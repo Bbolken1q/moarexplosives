@@ -1,4 +1,6 @@
 {
   "item.moarexplosives.remote_explosive": "C4 Explosive",
-  "item.moarexplosives.remote_trigger": "Remote trigger"
+  "item.moarexplosives.remote_trigger": "Remote trigger",
+  "item.moarexplosives.plate_carrier": "Plate carrier",
+  "item.moarexplosives.armor_plate": "Armor plate"
 }

@@ -1,4 +1,6 @@
 {
   "item.moarexplosives.remote_explosive": "Ładunek C4",
-  "item.moarexplosives.remote_trigger": "Zdalny aktywator"
+  "item.moarexplosives.remote_trigger": "Zdalny aktywator",
+  "item.moarexplosives.plate_carrier": "Kamizelka taktyczna",
+  "item.moarexplosives.armor_plate": "Płyta balistyczna"
 }

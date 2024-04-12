@@ -1,5 +1,7 @@
 package com.BolekB.moarexplosives.item;
 
+import com.BolekB.moarexplosives.item.custom.armor_plate_item;
+import com.BolekB.moarexplosives.item.custom.plate_carrier_item;
 import com.BolekB.moarexplosives.item.custom.remote_activator_item;
 import com.BolekB.moarexplosives.item.custom.remote_explosive_item;
 import com.BolekB.moarexplosives.moarexplosives;
@@ -21,10 +23,13 @@ public class ModItems {
             () -> new remote_explosive_item(new Item.Properties().tab(ItemGroup.TAB_TOOLS).stacksTo(1)));
 
     public static final RegistryObject<Item> PLATE_CARRIER = ITEMS.register("plate_carrier",
-            () -> new ArmorItem(ModArmorMaterial.PLATE, EquipmentSlotType.CHEST, new Item.Properties().tab(ItemGroup.TAB_COMBAT)));
+            () -> new plate_carrier_item(ModArmorMaterial.PLATE, EquipmentSlotType.CHEST, new Item.Properties().tab(ItemGroup.TAB_COMBAT).durability(16).defaultDurability(1)));
 
     public static final RegistryObject<Item> REMOTE_TRIGGER = ITEMS.register("remote_trigger",
             () -> new remote_activator_item(new Item.Properties().tab(ItemGroup.TAB_MISC).stacksTo(1)));
+
+    public static final RegistryObject<Item> ARMOR_PLATE = ITEMS.register("armor_plate",
+            () -> new armor_plate_item(new Item.Properties().tab(ItemGroup.TAB_MISC).stacksTo(3)));
 
     public static void register(IEventBus eventBus)
     {

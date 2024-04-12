@@ -17,7 +17,7 @@ import java.util.function.Supplier;
 
 public enum ModArmorMaterial implements IArmorMaterial {
     PLATE("plate", 37, new int[] {0, 6, 8, 7}, 0,
-            SoundEvents.ARMOR_EQUIP_LEATHER, 3.0F, 0.5F, () -> {return Ingredient.EMPTY;});
+            SoundEvents.ARMOR_EQUIP_LEATHER, 3.0F, 0.5F, () -> {return Ingredient.of(ModItems.ARMOR_PLATE.get());});
     ;
     private final String name;
     private final int durabilityMultiplier;
@@ -41,12 +41,12 @@ public enum ModArmorMaterial implements IArmorMaterial {
 
     @Override
     public int getDurabilityForSlot(EquipmentSlotType p_200896_1_) {
-        return 0;
+        return 16;
     }
 
     @Override
     public int getDefenseForSlot(EquipmentSlotType p_200902_1_) {
-        return 0;
+        return 2;
     }
 
     @Override
@@ -61,7 +61,7 @@ public enum ModArmorMaterial implements IArmorMaterial {
 
     @Override
     public Ingredient getRepairIngredient() {
-        return null;
+        return Ingredient.of(ModItems.ARMOR_PLATE.get());
     }
 
     @Override
